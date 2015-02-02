@@ -4,50 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HOMELETTE</title>   
+    <title>Dinner planner</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
   </head>
-
   <body>
-
 	<div class="container">
-
-	  
-	  <div class="row">
-	  	<div class="col-md-3">
-		<h1>HOMELETTE</h1> 
-		</div>
-			<div class="col-md-9" style="padding-top: 3%">
-			<I>From the best chefs in the world directly into your kitchen</I>
+		<h1>Dinner planner</h1>
+		<div id="exampleView">
+			<div>
+				Number of guests: <span id="numberOfGuests"></span>
 			</div>
-	  </div>
-	
-
-		<h3>My Dinner</h3>
-			
-			<div id="exempleView">
-				<div>
-				People: <span id="numberOfGuests"></span>
-				</div>
 			<div>
           <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
 				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
 			</div>
-			</div>
-
-	
-			<h4>Dish Name</h4>
-
-			<h4>Pending</h4>
-
-			<div>
-			<button id="confirmDinner" class="btn btn-warning">Confirm Dinner</button>
-			</div>
-
+		</div>
 	</div>
-
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
