@@ -4,24 +4,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HOMELETTE</title>   
+    <title>HOMELETTE</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
   </head>
-
   <body>
 	<div class="container">
-		<h1>HOMELETTE</h1>
-		<I><FONT SIZE="4">From the best chefs in the world directly into your kitchen</FONT></I>
-		<div id="exampleView">
-		</div>
-	</div>
+		
+		<div class="row">
+ 			<div class="col-md-3">
+			<h1>HOMELETTE</h1> 
+			</div>
+			<div class="col-md-9" style="padding-top: 3%">
+			<I>From the best chefs in the world directly into your kitchen</I>
+			</div>
+ 		</div>
 
-	
-  <body>
-	<div class="container">
-		<h3>My Dinner</h3>
+ 		<h3>My Dinner</h3>
+
+
 		<div id="exampleView">
 			<div>
 				People: <span id="numberOfGuests"></span>
@@ -31,20 +34,16 @@
 				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
 			</div>
 		</div>
-	</div>
+		<h4>Dish Name</h4>
 
-	<body>
-		<div class="container">
-			<h4>Dish Name</h4>
+		<h4>Pending</h4>
 
-			<h4>Pending</h4>
-
-			<div>
-			<button id="confirmDinner" class="btn" color="#ffa500">Confirm Dinner</button>
-			</div>
-
+		<div>
+		<button id="confirmDinner" class="btn btn-warning">Confirm Dinner</button>
 		</div>
-	</body>
+
+
+	</div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
