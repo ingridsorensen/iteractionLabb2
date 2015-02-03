@@ -33,11 +33,9 @@
 				<!--left top menu-->
 				<div id="exampleView">
 					<div>
-					People: <span id="numberOfGuests">4</span>
-					</div>
-					<div>
-						<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-						<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+					People: <input id="number" value="0" size="10"/>
+						<button id="minusGuest" class="btn" onclick="setNumberOfGuests(-1)"><span class="glyphicon glyphicon-minus" ></span></button>
+						<button id="plusGuest" class="btn" onclick="setNumberOfGuests(1)"><span class="glyphicon glyphicon-plus"></span></button>
 					</div>
 				</div>
 			

@@ -6,6 +6,15 @@ var DinnerModel = function() {
 
 
 	this.setNumberOfGuests = function(num) {
+		var number = document.getElementById('number').value;
+		var new_number = parseInt(number,10) + num;
+	
+			if (new_number < 0){
+				new_number = 0
+		}
+		
+		document.getElementById('number').value = new_number;
+		return new_number;
 		//TODO Lab 2
 	}
 
