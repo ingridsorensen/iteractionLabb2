@@ -11,25 +11,28 @@ var DinnerModel = function() {
 	
 			if (new_number < 0){
 				new_number = 0
-		}
+			}
 		
 		document.getElementById('number').value = new_number;
 		return new_number;
-		//TODO Lab 2
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
-		//TODO Lab 2
+		var numberOfGuests = document.getElementById('number').value;
+		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
-		//TODO Lab 2
+		var selectedDish = document.getElementById('selectedDish').string;
+		return selectedDish;
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
+		var menu = document.
+
 		//TODO Lab 2
 	}
 
@@ -40,12 +43,23 @@ var DinnerModel = function() {
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
+		var menuPrice = document.getElementById('totalDinnerPrice').value;
+		var totalMenuPrice = menuPrice * getNumberOfGuests();
+		return totalMenuPrice;
 		//TODO Lab 2
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
+		var 
+
+		if(){
+
+
+		}
+
+
 		//TODO Lab 2 
 	}
 
