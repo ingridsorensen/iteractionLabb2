@@ -1,12 +1,7 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
- 
-	//TODO Lab 2 implement the data structure that will hold number of guest
-	// and selected dinner options for dinner menu
 
 	var numberOfGuests = 0;
-
-	var test = "Nuså";
 
 	var menu = [];
 
@@ -44,8 +39,8 @@ var DinnerModel = function() {
 		for (var i = menu.length - 1; i >= 0; i--) {
 			if (dishes[menu[i]]["type"] === type) {
 				selected = menu[i];
-			};
-		};
+			}
+		}
 		return selected;
 	}
 
@@ -59,12 +54,15 @@ var DinnerModel = function() {
 		var ingredient = [];
 
 		for (var i = menu.length - 1; i >= 0; i--) { 
-			var temp = dishes[menu[i]][ingredients];
-			ingredient.push[temp];
-		};
+			if (dishes[menu[i]]["type"] === type) {
+			ingredient.push(menu[i]);	
+			}
+		}
 		return ingredient;
 	}
 
+
+    //  JOBBA VIDARE MED!!!
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		var menuPrice = document.getElementById('totalDinnerPrice').value;
@@ -85,16 +83,17 @@ var DinnerModel = function() {
 
 		if (previousDish && index !== -1) {
 			menu[index] = dish;
-		};
+		}
 
 		menu.push[dish];
+		this.notifyObservers();
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		var dish = getDish(id);
-		var index = menu.indexOf(dish);
-		delete menu[index];
+		menu.splice(menu.indexOf(dish),1);
+		this.notifyObservers();
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -126,6 +125,38 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
+	}
+
+
+
+	this.setMenu = function () {
+		var html = '';
+		var i;
+		var amountOfRows = Math.round(dishes.length/4);
+		for (i = 0; i < amountOfRows; i++) {
+			html = html + '<div class="row">'
+						+ this.setrow()
+						+ '</div>';
+		}
+		return html;
+	}
+
+	this.setrow = function () {
+		var html = '';
+		var dishesEachRow = 4;
+		var j;
+		for (j = 0; j < dishesEachRow; j++) {
+			html = html +	'<div class="col-xs-3">'
+						+		'<div class="thumbnail">'
+						+			'<img src="images/' + dishes[j]["image"] + '" alt="images/image-not-found.gif">'
+						+			'<div class="caption">'
+						+				'<h3>' + dishes[j]["name"] + '</h3>'
+						+				'<p>'+ dishes[j]["description"] +'</p>'
+						+			'</div>'
+						+		'</div>'							
+						+	'</div>';					
+		}
+		return html;
 	}
 
 
