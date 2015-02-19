@@ -10,6 +10,21 @@ var DinnerModel = function() {
 
 	var menu = [];
 
+	this._observers = [];
+
+	//Observer
+	this.addObserver = function(observer) 
+	{
+		this._observers.push(observer);
+	}
+
+	this.notifyObservers = function(arg) 
+	{
+		for(var i=0; i<this._observers.length; i++) 
+		{
+			this._observers[i].update(arg);
+		}	
+	}
 
 	this.setNumberOfGuests = function(num) {
 		var number = document.getElementById('number').value;
