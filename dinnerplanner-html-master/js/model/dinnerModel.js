@@ -127,9 +127,7 @@ var DinnerModel = function() {
 		}
 	}
 
-
-
-	this.menuTable = function () {
+	this.fullMenu = function () {
 		var html = '';
 		var i;
 		var amountOfRows = Math.round(dishes.length/4);
