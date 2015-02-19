@@ -11,5 +11,9 @@ var ExampleView = function (container, model) {
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	
+	this.update = function(){
+		this.numberOfGuests.html(model.getNumberOfGuests());
+	}
+	
 }
  

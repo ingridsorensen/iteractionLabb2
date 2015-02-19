@@ -10,30 +10,26 @@ var DinnerModel = function() {
 
 	var menu = [];
 
-	var o_observers = [];
+	var obs_list = [];
 
 	//Observer
 	this.addObserver = function(observer) 
 	{
-		o_observers.push(observer);
+		obs_list.push(observer);
 	}
+	
+	
 
 	this.notifyObservers = function(obj) 
 	{
-		for(var i=0; i<this._observers.length; i++) {
-			o_observers[i].update();
+		for(var i=0; i<this.obs_list.length; i++) {
+			obs_list[i].update();
 		}	
 	}
 
 	this.setNumberOfGuests = function(num) {
-		var number = document.getElementById('number').value;
-		numberOfGuests = parseInt(number,10) + num;
-	
-			if (numberOfGuests < 0){
-				numberOfGuests = 0
-			}
-		
-		document.getElementById('number').value = numberOfGuests;
+		numberOfGuests = num;
+		this.notifyObservers("");
 		return numberOfGuests;
 	}
 
