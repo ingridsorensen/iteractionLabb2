@@ -129,19 +129,19 @@ var DinnerModel = function() {
 
 
 
-	this.setMenu = function () {
+	this.menuTable = function () {
 		var html = '';
 		var i;
 		var amountOfRows = Math.round(dishes.length/4);
 		for (i = 0; i < amountOfRows; i++) {
 			html = html + '<div class="row">'
-						+ this.setrow()
+						+ this.fixRow()
 						+ '</div>';
 		}
 		return html;
 	}
 
-	this.setrow = function () {
+	this.fixRow = function () {
 		var html = '';
 		var dishesEachRow = 4;
 		var j;
