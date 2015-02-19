@@ -6,7 +6,7 @@ var DinnerModel = function() {
 
 	var numberOfGuests = 0;
 
-	var test = 8;
+	var test = "Nuså";
 
 	var menu = [];
 
