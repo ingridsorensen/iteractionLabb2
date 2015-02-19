@@ -12,19 +12,18 @@ var DinnerModel = function() {
 
 	var obs_list = [];
 
-	//Observer
-	this.addObserver = function(observer) 
-	{
-		obs_list.push(observer);
+	this.addObserver = function(observer) {
+		obs_list.push(observer);	
 	}
-	
-	
+	this.removeObserver = function() {
+		obs_list.splice(0, 1);	
+	}
 
-	this.notifyObservers = function(obj) 
-	{
-		for(var i=0; i<this.obs_list.length; i++) {
+	this.notifyObservers = function(obj) {
+		var i;
+		for	(i = 0; i < obs_list.length; i++) {	
 			obs_list[i].update();
-		}	
+		}
 	}
 
 	this.setNumberOfGuests = function(num) {
