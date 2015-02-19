@@ -6,6 +6,8 @@ var DinnerModel = function() {
 
 	var numberOfGuests = 0;
 
+	var test = 8;
+
 	var menu = [];
 
 
@@ -45,7 +47,13 @@ var DinnerModel = function() {
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 2
+		var ingredient = [];
+
+		for (var i = menu.length - 1; i >= 0; i--) { 
+			var temp = dishes[menu[i]][ingredients];
+			ingredient.push[temp];
+		};
+		return ingredient;
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
@@ -105,7 +113,7 @@ var DinnerModel = function() {
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
 	  for(key in dishes){
-			if(dishes[key].id == id) {
+			if(dishes[key].id === id) {
 				return dishes[key];
 			}
 		}
