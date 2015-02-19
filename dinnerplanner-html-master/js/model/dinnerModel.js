@@ -18,11 +18,10 @@ var DinnerModel = function() {
 		this._observers.push(observer);
 	}
 
-	this.notifyObservers = function(arg) 
+	this.notifyObservers = function(obj) 
 	{
-		for(var i=0; i<this._observers.length; i++) 
-		{
-			this._observers[i].update(arg);
+		for(var i=0; i<this._observers.length; i++) {
+			this._observers[i].update();
 		}	
 	}
 
