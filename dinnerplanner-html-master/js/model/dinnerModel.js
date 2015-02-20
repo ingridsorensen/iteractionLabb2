@@ -127,7 +127,7 @@ var DinnerModel = function() {
 		}
 	}
 
-
+//********** Select dish **********************
 	this.selectDish_menu = function () {
 		var html = '';
 		var count = 0;
@@ -161,6 +161,48 @@ var DinnerModel = function() {
 		return html;
 	}
 
+//*************** Meatballs **************
+
+this.namePicture = function () {
+	var html = '';
+	var nameDish, imageDish;
+//	for (var i = dishes.length - 1; i >= 0; i--) { 
+		//if (dishes[i]["id"] === id) {
+			nameDish = (dishes[1]["name"]);	
+			imageDish = (dishes[1]["image"]);
+		//}
+	//}
+
+	html = html + '<h3>' + nameDish + '</h3>'
+				+ '<div class="thumbnail">'
+				+ 	'<img src="images/' + imageDish + '" alt="images/image-not-found.gif">'
+				+ '</div>';
+
+	return html;
+}
+
+
+this.getIngredients = function () {
+	var html = '';
+	var ingredientsList = [];
+//	for (var i = dishes.length - 1; i >= 0; i--) { 
+		//if (dishes[i]["id"] === id) {
+			ingredientsList.push(dishes[1]["ingredients"]);	
+		//}
+//	}	
+
+	for (var i = 0; i < ingredientsList.length; i++) {
+		html = html +   '<tr>'
+					+ 	'<td>' + ingredientList[i]["quantity"] + '</td>'
+					+	'<td>' + ingredientList[i]["unit"] + '</td>'	
+					+	'<td>' + ingredientList[i]["name"] + '</td>'
+					+ 	'<td>' "SEK" '</td>'
+					+	'<td>' + ingredientList[i]["price"] + '</td>'
+					+	'</tr>';
+	}
+	return html;
+}
+
 //check if the description text is to long, in that case reduce it, 
 // otherwise return the unchanged decription. 
 this.compressDescription = function (text) {
@@ -169,6 +211,8 @@ this.compressDescription = function (text) {
 	}
 	return text;
 }
+
+
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
