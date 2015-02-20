@@ -128,16 +128,17 @@ var DinnerModel = function() {
 	}
 
 
-	this.fullMenu = function () {
+	this.selectDish_menu = function () {
 		var html = '';
 		var count = 0;
 		var dishesEachRow = 4;
 		var amountOfRows = Math.round(dishes.length/dishesEachRow);
 		for (var i = 0; i < amountOfRows; i++) {
+			count=+(dishesEachRow*i);
 			html = html + '<div class="row">'
 						+ this.fixRow(count, dishesEachRow)
-						+ '</div>';
-			count++;
+						+ '</div>';	
+		//	count=+4;
 		}
 		return html;
 	}
@@ -408,6 +409,30 @@ this.compressDescription = function (text) {
 		},{
 		'id':202,
 		'name':'Strawberry',
+		'type':'dessert',
+		'image':'icecream.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ice cream',
+			'quantity':100,
+			'unit':'ml',
+			'price':6
+			}]
+		},{
+		'id':203,
+		'name':'Vanilla Ice cream wop',
+		'type':'dessert',
+		'image':'icecream.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ice cream',
+			'quantity':100,
+			'unit':'ml',
+			'price':6
+			}]
+		},{
+		'id':204,
+		'name':'Strawberry mums',
 		'type':'dessert',
 		'image':'icecream.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
