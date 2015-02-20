@@ -127,32 +127,34 @@ var DinnerModel = function() {
 		}
 	}
 
+
 	this.fullMenu = function () {
 		var html = '';
-		var i;
-		var amountOfRows = Math.round(dishes.length/4);
-		for (i = 0; i < amountOfRows; i++) {
+		var count = 0;
+		var dishesEachRow = 4;
+		var amountOfRows = Math.round(dishes.length/dishesEachRow);
+		for (var i = 0; i < amountOfRows; i++) {
 			html = html + '<div class="row">'
-						+ this.fixRow()
+						+ this.fixRow(count, dishesEachRow)
 						+ '</div>';
+			count++;
 		}
 		return html;
 	}
 
-	this.fixRow = function () {
+	this.fixRow = function (count, dishesEachRow) {
 		var html = '';
-		var dishesEachRow = 4;
-		var j;
-		for (j = 0; j < dishesEachRow; j++) {
+		for (var j = 0; j < dishesEachRow; j++) {
 			html = html +	'<div class="col-xs-3">'
 						+		'<div class="thumbnail">'
-						+			'<img src="images/' + dishes[j]["image"] + '" alt="images/image-not-found.gif">'
+						+			'<img src="images/' + dishes[count]["image"] + '" alt="images/image-not-found.gif">'
 						+			'<div class="caption">'
-						+				'<h3>' + dishes[j]["name"] + '</h3>'
-						+				'<p>'+ dishes[j]["description"] +'</p>'
+						+				'<h3>' + dishes[count]["name"] + '</h3>'
+						+				'<p>'+ dishes[count]["description"] +'</p>'
 						+			'</div>'
 						+		'</div>'							
-						+	'</div>';					
+						+	'</div>';	
+			count++;				
 		}
 		return html;
 	}
