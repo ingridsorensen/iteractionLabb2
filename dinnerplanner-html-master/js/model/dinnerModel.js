@@ -145,12 +145,13 @@ var DinnerModel = function() {
 	this.fixRow = function (count, dishesEachRow) {
 		var html = '';
 		for (var j = 0; j < dishesEachRow; j++) {
+			var description = this.compressDescription(dishes[count]["description"]);
 			html = html +	'<div class="col-xs-3">'
-						+		'<div class="thumbnail">'
-						+			'<img src="images/' + dishes[count]["image"] + '" alt="images/image-not-found.gif">'
+						+		'<div class="thumbnail" style="height: 270px">'
+						+			'<img style="height: 120px; width: 160px" src="images/' + dishes[count]["image"] + '" alt="images/image-not-found.gif">'
 						+			'<div class="caption">'
-						+				'<h3>' + dishes[count]["name"] + '</h3>'
-						+				'<p>'+ dishes[count]["description"] +'</p>'
+						+				'<h4>' + dishes[count]["name"] + '</h4>'
+						+				'<p>'+ description +'</p>'
 						+			'</div>'
 						+		'</div>'							
 						+	'</div>';	
@@ -159,6 +160,14 @@ var DinnerModel = function() {
 		return html;
 	}
 
+//check if the description text is to long, in that case reduce it, 
+// otherwise return the unchanged decription. 
+this.compressDescription = function (text) {
+	if (text.length >= 30) {
+		text = text.substring(0, 31) + '...';
+	}
+	return text;
+}
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
