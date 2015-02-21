@@ -181,6 +181,15 @@ this.namePicture = function () {
 	return html;
 }
 
+this.getDescription = function(){
+	var html = '';
+	var prep;
+	for (var i = dishes.length - 1; i >= 0; i--) {
+		if(dishes[i]["id"] === id){
+			prep = (dishes)
+		};
+	};
+}
 
 this.getIngredients = function () {
 	var html = '';
