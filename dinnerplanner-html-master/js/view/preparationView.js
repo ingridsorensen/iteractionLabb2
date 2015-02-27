@@ -1,5 +1,5 @@
 
-var SelectdishView = function (container, model) {
+var PreparationView = function (container, model) {
 
 
 	this.selectDish_menuSpot = container.find("#menuChoices");

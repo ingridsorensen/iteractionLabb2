@@ -1,5 +1,5 @@
 //ExampleViewController Object constructor
-var SelectdishViewController = function(view, model) {
+var DishViewController = function(view, model) {
  	view.plusButton.click(function(){
  		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
  	});

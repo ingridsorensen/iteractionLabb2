@@ -1,5 +1,5 @@
 
-var firstpageView = function (container, model) {
+var FirstpageView = function (container, model) {
 
 	this.newDinner = container.find("#newDinner");
 
