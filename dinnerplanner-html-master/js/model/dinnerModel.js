@@ -4,7 +4,7 @@ var DinnerModel = function() {
 	var numberOfGuests = 0;
 
 	var menu = [];
-	
+
 	var obs = [];
 
 	this.addObserver = function(observer) {
@@ -128,12 +128,14 @@ var DinnerModel = function() {
 	}
 
 
+
 	this.fullMenu = function () {
 		var html = '';
 		var count = 0;
 		var dishesEachRow = 4;
 		var amountOfRows = Math.round(dishes.length/dishesEachRow);
 		for (var i = 0; i < amountOfRows; i++) {
+			count=+(dishesEachRow*i);
 			html = html + '<div class="row">'
 						+ this.fixRow(count, dishesEachRow)
 						+ '</div>';
@@ -159,58 +161,6 @@ var DinnerModel = function() {
 		}
 		return html;
 	}
-
-
-//*************** Meatballs **************
-
-this.namePicture = function () {
-	var html = '';
-	var nameDish, imageDish;
-//	for (var i = dishes.length - 1; i >= 0; i--) { 
-		//if (dishes[i]["id"] === id) {
-			nameDish = (dishes[1]["name"]);	
-			imageDish = (dishes[1]["image"]);
-		//}
-	//}
-
-	html = html + '<h3>' + nameDish + '</h3>'
-				+ '<div class="thumbnail">'
-				+ 	'<img src="images/' + imageDish + '" alt="images/image-not-found.gif">'
-				+ '</div>';
-
-	return html;
-}
-
-this.getDescription = function(){
-	var html = '';
-	var prep;
-	for (var i = dishes.length - 1; i >= 0; i--) {
-		if(dishes[i]["id"] === id){
-			prep = (dishes)
-		};
-	};
-}
-
-this.getIngredients = function () {
-	var html = '';
-	var ingredientsList = [];
-//	for (var i = dishes.length - 1; i >= 0; i--) { 
-		//if (dishes[i]["id"] === id) {
-			ingredientsList.push(dishes[1]["ingredients"]);	
-		//}
-//	}	
-
-	for (var i = 0; i < ingredientsList.length; i++) {
-		html = html +   '<tr>'
-					+ 	'<td>' + ingredientList[i]["quantity"] + '</td>'
-					+	'<td>' + ingredientList[i]["unit"] + '</td>'	
-					+	'<td>' + ingredientList[i]["name"] + '</td>'
-					+ 	'<td>' "SEK" '</td>'
-					+	'<td>' + ingredientList[i]["price"] + '</td>'
-					+	'</tr>';
-	}
-	return html;
-}
 
 //check if the description text is to long, in that case reduce it, 
 // otherwise return the unchanged decription. 
@@ -495,5 +445,6 @@ this.compressDescription = function (text) {
 			}]
 		}
 	];
+
 
 }

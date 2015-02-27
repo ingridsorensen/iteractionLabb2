@@ -131,34 +131,45 @@ var DinnerModel = function() {
 
 	this.menuTable = function () {
 		var html = '';
-		var i;
-		var amountOfRows = Math.round(dishes.length/4);
-		for (i = 0; i < amountOfRows; i++) {
+		var count = 0;
+		var dishesEachRow = 4;
+		var amountOfRows = Math.round(dishes.length/dishesEachRow);
+		for (var i = 0; i < amountOfRows; i++) {
+			count=+(dishesEachRow*i);
 			html = html + '<div class="row">'
-						+ this.fixRow()
+						+ this.fixRow(count, dishesEachRow)
 						+ '</div>';
+			count++;
 		}
 		return html;
 	}
 
-	this.fixRow = function () {
+	this.fixRow = function (count, dishesEachRow) {
 		var html = '';
-		var dishesEachRow = 4;
-		var j;
-		for (j = 0; j < dishesEachRow; j++) {
+		for (var j = 0; j < dishesEachRow; j++) {
+			var description = this.compressDescription(dishes[count]["description"]);
 			html = html +	'<div class="col-xs-3">'
-						+		'<div class="thumbnail">'
-						+			'<img src="images/' + dishes[j]["image"] + '" alt="images/image-not-found.gif">'
+						+		'<div class="thumbnail" style="height: 270px">'
+						+			'<img style="height: 120px; width: 160px" src="images/' + dishes[count]["image"] + '" alt="images/image-not-found.gif">'
 						+			'<div class="caption">'
-						+				'<h3>' + dishes[j]["name"] + '</h3>'
-						+				'<p>'+ dishes[j]["description"] +'</p>'
+						+				'<h4>' + dishes[count]["name"] + '</h4>'
+						+				'<p>'+ description +'</p>'
 						+			'</div>'
 						+		'</div>'							
-						+	'</div>';					
+						+	'</div>';	
+			count++;				
 		}
 		return html;
 	}
 
+//check if the description text is to long, in that case reduce it, 
+// otherwise return the unchanged decription. 
+this.compressDescription = function (text) {
+	if (text.length >= 30) {
+		text = text.substring(0, 31) + '...';
+	}
+	return text;
+}
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
@@ -408,7 +419,32 @@ var DinnerModel = function() {
 			'unit':'ml',
 			'price':6
 			}]
+		},{
+		'id':203,
+		'name':'Vanilla Ice cream woop',
+		'type':'dessert',
+		'image':'icecream.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ice cream',
+			'quantity':100,
+			'unit':'ml',
+			'price':6
+			}]
+		},{
+		'id':204,
+		'name':'Strawberry mums',
+		'type':'dessert',
+		'image':'icecream.jpg',
+		'description':"Here is how you make it... Lore ipsum...",
+		'ingredients':[{ 
+			'name':'ice cream',
+			'quantity':100,
+			'unit':'ml',
+			'price':6
+			}]
 		}
 	];
+
 
 }
