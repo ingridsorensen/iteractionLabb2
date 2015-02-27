@@ -2,7 +2,9 @@
 var DinnerModel = function() {
 
 	var numberOfGuests = 0;
+
 	var menu = [];
+
 	var obs = [];
 
 	this.addObserver = function(observer) {
@@ -126,101 +128,37 @@ var DinnerModel = function() {
 	}
 
 
-	this.selectDish_menu = function () {
+
+	this.menuTable = function () {
 		var html = '';
-		var count = 0;
-		var dishesEachRow = 4;
-		var amountOfRows = Math.round(dishes.length/dishesEachRow);
-		for (var i = 0; i < amountOfRows; i++) {
-			count=+(dishesEachRow*i);
+		var i;
+		var amountOfRows = Math.round(dishes.length/4);
+		for (i = 0; i < amountOfRows; i++) {
 			html = html + '<div class="row">'
-						+ this.fixRow(count, dishesEachRow)
-						+ '</div>';	
-		//	count=+4;
+						+ this.fixRow()
+						+ '</div>';
 		}
 		return html;
 	}
 
-	this.fixRow = function (count, dishesEachRow) {
+	this.fixRow = function () {
 		var html = '';
-		for (var j = 0; j < dishesEachRow; j++) {
-			var description = this.compressDescription(dishes[count]["description"]);
+		var dishesEachRow = 4;
+		var j;
+		for (j = 0; j < dishesEachRow; j++) {
 			html = html +	'<div class="col-xs-3">'
-						+		'<div class="thumbnail" style="height: 270px">'
-						+			'<img style="height: 120px; width: 160px" src="images/' + dishes[count]["image"] + '" alt="images/image-not-found.gif">'
+						+		'<div class="thumbnail">'
+						+			'<img src="images/' + dishes[j]["image"] + '" alt="images/image-not-found.gif">'
 						+			'<div class="caption">'
-						+				'<h4>' + dishes[count]["name"] + '</h4>'
-						+				'<p>'+ description +'</p>'
+						+				'<h3>' + dishes[j]["name"] + '</h3>'
+						+				'<p>'+ dishes[j]["description"] +'</p>'
 						+			'</div>'
 						+		'</div>'							
-						+	'</div>';	
-			count++;				
+						+	'</div>';					
 		}
 		return html;
 	}
 
-<<<<<<< HEAD
-//*************** Meatballs **************
-
-this.namePicture = function () {
-	var html = '';
-	var nameDish, imageDish;
-//	for (var i = dishes.length - 1; i >= 0; i--) { 
-		//if (dishes[i]["id"] === id) {
-			nameDish = (dishes[1]["name"]);	
-			imageDish = (dishes[1]["image"]);
-		//}
-	//}
-
-	html = html + '<h3>' + nameDish + '</h3>'
-				+ '<div class="thumbnail">'
-				+ 	'<img src="images/' + imageDish + '" alt="images/image-not-found.gif">'
-				+ '</div>';
-
-	return html;
-}
-
-this.getDescription = function(){
-	var html = '';
-	var prep;
-	for (var i = dishes.length - 1; i >= 0; i--) {
-		if(dishes[i]["id"] === id){
-			prep = (dishes)
-		};
-	};
-}
-
-this.getIngredients = function () {
-	var html = '';
-	var ingredientsList = [];
-//	for (var i = dishes.length - 1; i >= 0; i--) { 
-		//if (dishes[i]["id"] === id) {
-			ingredientsList.push(dishes[1]["ingredients"]);	
-		//}
-//	}	
-
-	for (var i = 0; i < ingredientsList.length; i++) {
-		html = html +   '<tr>'
-					+ 	'<td>' + ingredientList[i]["quantity"] + '</td>'
-					+	'<td>' + ingredientList[i]["unit"] + '</td>'	
-					+	'<td>' + ingredientList[i]["name"] + '</td>'
-					+ 	'<td>' "SEK" '</td>'
-					+	'<td>' + ingredientList[i]["price"] + '</td>'
-					+	'</tr>';
-	}
-	return html;
-}
-
-=======
->>>>>>> parent of 53cd568... fixing in lasange import
-//check if the description text is to long, in that case reduce it, 
-// otherwise return the unchanged decription. 
-this.compressDescription = function (text) {
-	if (text.length >= 30) {
-		text = text.substring(0, 31) + '...';
-	}
-	return text;
-}
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
@@ -461,30 +399,6 @@ this.compressDescription = function (text) {
 		},{
 		'id':202,
 		'name':'Strawberry',
-		'type':'dessert',
-		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
-			'name':'ice cream',
-			'quantity':100,
-			'unit':'ml',
-			'price':6
-			}]
-		},{
-		'id':203,
-		'name':'Vanilla Ice cream wop',
-		'type':'dessert',
-		'image':'icecream.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
-			'name':'ice cream',
-			'quantity':100,
-			'unit':'ml',
-			'price':6
-			}]
-		},{
-		'id':204,
-		'name':'Strawberry mums',
 		'type':'dessert',
 		'image':'icecream.jpg',
 		'description':"Here is how you make it... Lore ipsum...",

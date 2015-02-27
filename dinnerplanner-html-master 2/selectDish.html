@@ -8,7 +8,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="design.css">-->
 
   </head>
   <body>
@@ -25,14 +24,14 @@
  		</div><!--End Header-->		
 		
 		<!--Frame-->	
-		<div id="exampleView" class="row" style="border-style: solid;">	
+		<div class="row" style="border-style: solid;">	
 
 			<!--Left frame-->
 			<div class="col-md-3"style="border-top-style: solid;">
 				<h3>My Dinner</h3>
 
 				<!--left top menu-->
-				<div>
+				<div id="exampleView">
 					<div>
 					People: <p id="numberOfGuests">0</p>
 						<button id="minusGuest" class="btn" ><span class="glyphicon glyphicon-minus" ></span></button>
@@ -126,7 +125,6 @@
 
 				<!--Right side bottom-->			
 				<div id="menuChoices" class="row" style="padding-top: 10px; padding-left: 30px; display: block; overflow-y: auto; overflow-x: hidden; height: 450px; width: 100%">
-			
 				</div><!--End Right side bottom-->
 			
 			</div><!--End Right frame-->
