@@ -1,5 +1,5 @@
 //ExampleViewController Object constructor
-var ExampleViewController = function(view, model) {
+var SelectDishViewController = function(view, model) {
  	view.plusButton.click(function(){
  		model.setNumberOfGuests(model.getNumberOfGuests() + 1);
  	});
@@ -8,10 +8,10 @@ var ExampleViewController = function(view, model) {
  		model.setNumberOfGuests(model.getNumberOfGuests() - 1);
  	});
 
- //	view.selectDish_menuSpot.click(function(){
+ 	view.typeofdish.click(function(){
+ 		model.getAllDishes(starter, filter));
+ 	});
 
-
- //	});
  	//view.goToMainButton.click(function(){
  	//	window.location.href = "selectDish.html";
  	//});

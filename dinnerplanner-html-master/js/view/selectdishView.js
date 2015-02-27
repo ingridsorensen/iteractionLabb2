@@ -1,12 +1,13 @@
 
-var ExampleView = function (container, model) {
+var SelectdishView = function (container, model) {
 
 
 	this.selectDish_menuSpot = container.find("#menuChoices");
 	this.typeofdish = container.find("#Starter");
 
-	
-	this.selectDish_menuSpot.html(model.selectDish_menu());
+
+	this.selectDish_menuSpot.html(model.getAllDishes());
+	this.typeofdish.html(model.getAllDishes());
 
 
 	model.addObserver(this);
@@ -15,6 +16,10 @@ var ExampleView = function (container, model) {
 	this.update = function(){
 		this.numberOfGuests.html(model.getNumberOfGuests());
 		this.selectDish_menuSpot.html(model.getAllDishes());
+		this.typeofdish.html(model.getAllDishes());
+
+
+
 	}
 }
  
