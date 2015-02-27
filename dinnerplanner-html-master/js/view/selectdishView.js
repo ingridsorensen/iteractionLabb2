@@ -2,7 +2,7 @@
 var SelectdishView = function (container, model) {
 
 	this.menu = container.find("#menuChoices");
-	this.menu.html(model.fullMenu());
+	this.menu.html(model.getAllDishes());
 
 
 	model.addObserver(this);

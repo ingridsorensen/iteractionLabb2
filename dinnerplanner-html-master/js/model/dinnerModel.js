@@ -128,7 +128,6 @@ var DinnerModel = function() {
 	}
 
 
-
 	this.fullMenu = function () {
 		var html = '';
 		var count = 0;
@@ -445,6 +444,5 @@ this.compressDescription = function (text) {
 			}]
 		}
 	];
-
 
 }
