@@ -7,10 +7,10 @@ var ExampleView = function (container, model) {
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
 	
-	this.selectDish_menuSpot = container.find("#menuChoices");
+	this.menu = container.find("#menuChoices");
 	
 	this.numberOfGuests.html(model.getNumberOfGuests());
-	this.selectDish_menuSpot.html(model.selectDish_menu());
+	this.menu.html(model.fullMenu());
 
 	model.addObserver(this);
 	
