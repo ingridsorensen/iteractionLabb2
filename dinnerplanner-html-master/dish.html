@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HOMELETTE</title>
+    <title>HOMELETTE - Dish</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
   </head>
   <body>
-	<div class="container">
+	<div id="dishView" class="container">
 		
 		<!--Header-->
 		<div class="row" style="border-style: solid; background-color: LightGrey;">
@@ -84,7 +84,7 @@
 			
 				<div class="row" style="margin-top:10px;">
 					<div class="col-md-12" align="center";>
-						<button id="confirmDinner" class="btn btn-warning" >Confirm Dinner</button>
+						<button class="btn btn-warning" >Confirm Dinner</button>
 					</div>
 				</div>
 			
@@ -104,7 +104,7 @@
 							<div class="thumbnail">
 								<img src="images/meatballs.jpg" alt="images/image-not-found.gif" style="width:100%; height:auto">
 							</div>
-						<button class="btn btn-warning" type="button">Back to SELECT DISH</button>
+						<button id="goBack" class="btn btn-warning" type="button">Back to SELECT DISH</button>
 					</div>
 				
 				
@@ -143,7 +143,7 @@
 						
 						<div class="row" style="margin-bottom:10px">
 							<div class="col-md-6">
-							<button class="btn btn-warning" type="button">Confirm Dish</button>
+							<button id="confirmDish" class="btn btn-warning" type="button">Confirm Dish</button>
 							</div>
 							
 							<div class="col-md-6" align="right">
@@ -199,5 +199,23 @@
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
+
+	<script src="js/view/firstpageView.js"></script>
+	<script src="js/view/firstpageViewController.js"></script>
+
+	<script src="js/view/selectdishView.js"></script>
+	<script src="js/view/selectdishViewController.js"></script>
+
+	<script src="js/view/sidemenuView.js"></script>
+	<script src="js/view/sidemenuViewController.js"></script>
+
+	<script src="js/view/dishView.js"></script>
+	<script src="js/view/dishViewController.js"></script>
+
+	<script src="js/view/menuView.js"></script>
+	<script src="js/view/menuViewController.js"></script>
+
+	<script src="js/view/preparationView.js"></script>
+	<script src="js/view/preparationViewController.js"></script>
   </body>
 </html>
