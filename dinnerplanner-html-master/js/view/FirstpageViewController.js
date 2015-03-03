@@ -1,7 +1,9 @@
 //ExampleViewController Object constructor
 var FirstpageViewController = function(view, model) {
  	view.newDinner.click(function(){
- 		window.location.href = "selectDish.html";
+ 	$("#firstpageView").css("display", "none");
+ 	$("#header").css("display", "block");
+ 	$("#exampleView").css("display", "block");
  	});
 }
 
