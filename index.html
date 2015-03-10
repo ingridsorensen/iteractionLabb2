@@ -12,8 +12,8 @@
   </head>
   <body>
 	<div class="container">
-		<!--Background picture and box firstpage-->
-		<div class="row" id="firstpageView" style="display: block; height: 610px; background-image: url('images/family2.jpg'); background-repeat: no-repeat; background-size: cover; -webkit-background-size: cover; overflow: hidden; border-style: solid;">
+<!-- ***********  FIRST PAGE ********** -->
+		<div id="firstpageView" class="row" style="display: block; height: 610px; background-image: url('images/family2.jpg'); background-repeat: no-repeat; background-size: cover; -webkit-background-size: cover; overflow: hidden; border-style: solid;">
 
 			<!--Header first page-->
 			<div class="row" style="border-style: solid; background-color: rgba(256,209,130, 0.7);">
@@ -42,138 +42,140 @@
 					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
 					aliquip ex ea commodo consequat.</p>
-				<button id="newDinner" class="btn btn-warning" >Creat new dinner</button>
+				<button type="button" id="newDinner" class="btn btn-warning" >Creat new dinner</button>
 			</div><!--End Text box-->
-		</div><!--End Background picture and box first page-->
+		</div>
+<!-- ***********  END FIRST PAGE ********** -->
 		
 		
 		
-		<!--Header -->
-		<div class="row" id="header" style="border-style: solid; background-color: LightGrey; display: none;">
+<!-- ***********  HEADER ********** -->
+		<div id="header" class="row" style="display: none; border-style: solid; background-color: LightGrey;">
  			<div class="col-md-3">
 				<h1>HOMELETTE</h1> 
 			</div>
 			<div class="col-md-9" style="padding-top: 3%">
 				<I>From the best chefs in the world directly into your kitchen</I>
 			</div>
- 		</div><!--End Header-->		
+ 		</div>
+ <!-- ***********  END HEADER ********** -->	
 		
 		
-		<!--Rad -->	
-		<div  class="row" style="border-style: solid; ">	
+<!-- ********** Rad ********* -->	
+	<div  class="row" style="border-style: solid; ">	
 			
-			<!--Frame sidemenu-->	
-			<!--Left frame-->
-			<div id="sidemenuView" class="col-md-3"style="border-top-style: solid; display: none;">
-				<h3>My Dinner</h3>
+<!-- ***********  SIDE MENU ********** -->	
+	<!--Left frame-->
+		<div id="sidemenuView" class="col-md-3"style="border-top-style: solid; display: none;">
+			<h3>My Dinner</h3>
 
-				<!--left top menu-->
+			<!--left top menu-->
+			<div>
 				<div>
-					<div>
-					People: <p id="numberOfGuests">0</p>
-						<button id="minusGuest" class="btn" ><span class="glyphicon glyphicon-minus" ></span></button>
-						<button id="plusGuest" class="btn" ><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
+				People: <p id="numberOfGuests">0</p>
+					<button id="minusGuest" class="btn" ><span class="glyphicon glyphicon-minus" ></span></button>
+					<button id="plusGuest" class="btn" ><span class="glyphicon glyphicon-plus"></span></button>
 				</div>
+			</div>
 			
 			<!--left middle menu-->
-				<div class="row" style="margin-top:10px; border-top-style: solid; border-bottom-style: solid; background-color: LightGrey;">
-					<div class="col-md-1">
-						<h4></h4>
-					</div>
-
-					<div class="col-md-5">
-						<h4>Dish Name</h4>
-					</div>
-					
-					<div class="col-md-4" align="right";>
-						<h4>Cost</h4>
-					</div>
-					
-					<div class="col-md-2" align="right";>
-						<h4></h4>
-					</div>
+			<div class="row" style="margin-top:10px; border-top-style: solid; border-bottom-style: solid; background-color: LightGrey;">
+				<div class="col-md-1">
+					<h4></h4>
 				</div>
+
+				<div class="col-md-5">
+					<h4>Dish Name</h4>
+				</div>
+					
+				<div class="col-md-4" align="right";>
+					<h4>Cost</h4>
+				</div>
+					
+				<div class="col-md-2" align="right";>
+					<h4></h4>
+				</div>
+			</div>
 			
 			<!--left bottom menu-->
-								
-				<div class="row" style="margin-top:10px;">
-					<div class="col-md-1">
-						<h4></h4>
-					</div>
-					<div class="col-md-5">
-						<h4>Pending</h4>
-					</div>
-					<div class="col-md-4" align="right";>
-						<h4>0.00</h4>
-					</div>
-					<div class="col-md-1" align="right";>
-						<h4></h4>
-					</div>
+			<div class="row" style="margin-top:10px;">
+				<div class="col-md-1">
+					<h4></h4>
 				</div>
+				<div class="col-md-5">
+					<h4>Pending</h4>
+				</div>
+				<div class="col-md-4" align="right";>
+					<h4>0.00</h4>
+				</div>
+				<div class="col-md-1" align="right";>
+					<h4></h4>
+				</div>
+			</div>
 			
-				<div class="row" style="margin-top:10px">
-					<div class="col-md-12" align="right";>
-						<hr>
-						<h4>SEK 0.00</h4>
-					</div>
+			<div class="row" style="margin-top:10px">
+				<div class="col-md-12" align="right";>
+					<hr>						
+					<h4>SEK 0.00</h4>
 				</div>
+			</div>
 			
-				<div class="row" style="margin-top:10px;">
-					<div class="col-md-12" align="center";>
-						<button id="confirmDinner" class="btn btn-warning" >Confirm Dinner</button>
-					</div>
+			<div class="row" style="margin-top:10px;">
+				<div class="col-md-12" align="center";>
+					<button id="confirmDinner" class="btn btn-warning" >Confirm Dinner</button>
 				</div>
+			</div>
 			
 			</div><!--End Left frame-->
-			<!--End side menu-->
+<!-- ***********  END SIDE MENU ********** -->	
 
-		<!--Frame select dish-->
+<!-- ***********  SELECT DISH ********** -->	
 
-			<!--Right frame-->
-			<div id="exampleView" class="col-md-9" style="border-left-style: solid; display: none;">
-			
-				<!--right top menu-->	
-				<div class="row" style="background-color: #ffd182; border-top-style: solid; border-bottom-style: solid; padding: 30px">
-					<h4 style="margin-left:5px;">SELECT DISH</h4>
-					<div class="row" style="border-top-style: dotted;">
-						<div class="col-md-6" style="margin-top:20px;">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Enter key words..">
-								<span class="input-group-btn">
-								<button class="btn btn-warning" type="button">search</button>
-								</span>
-							</div>
-						</div>
-						<div class="col-md-6"  style="margin-top:20px;">
-							<div class="dropdown">
-								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-								Course
-								<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-								<li id="Starter" role="presentation"><a role="menuitem" tabindex="-1" href="#">Starter</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Main Course</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
-								</ul>
-							</div>
+		<!--Right frame-->
+		<div id="exampleView" class="col-md-9" style="border-left-style: solid; display: none;">
+
+			<!--right top menu-->	
+			<div class="row" style="background-color: #ffd182; border-top-style: solid; border-bottom-style: solid; padding: 30px">
+				<h4 style="margin-left:5px;">SELECT DISH</h4>
+				<div class="row" style="border-top-style: dotted;">
+					<div class="col-md-6" style="margin-top:20px;">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Enter key words..">
+							<span class="input-group-btn">
+							<button class="btn btn-warning" type="button">search</button>
+							</span>
 						</div>
 					</div>
+					<div class="col-md-6"  style="margin-top:20px;">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+							Course
+							<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li id="Starter" role="presentation"><a role="menuitem" tabindex="-1" href="#">Starter</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Main Course</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dessert</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 					
-				</div> <!--end right top menu-->
+			</div> <!--end right top menu-->
 
 
-				<!--Right side bottom-->			
-				<div class="row" style="padding-top: 10px; padding-left: 30px; display: block; overflow-y: auto; overflow-x: hidden; height: 450px; width: 100%">
-					<div id="menuChoices" class="row">
-					</div>				
-				</div><!--End Right side bottom-->
+			<!--Right side bottom-->			
+			<div class="row" style="padding-top: 10px; padding-left: 30px; display: block; overflow-y: auto; overflow-x: hidden; height: 450px; width: 100%">
+				<div id="menuChoices" class="row">
+				</div>				
+			</div><!--End Right side bottom-->
 			
-			</div><!--End Right frame and selectDish-->
+		</div>
+<!-- ***********  END SELECT DISH ********** -->
+
 		
 		
-		
-		<!--Frame dishview-->	
+<!-- ***********  DISH ********** -->
 		<div id="dishView" class="row" style="border-style: solid; display: none;">	
 
 			<!--Right frame-->
@@ -263,13 +265,16 @@
 				</div><!--End Right side bottom-->
 				</div>
 			</div><!--End Right frame-->
-		</div><!--End frame dishview-->
-		
-		</div> <!--rad avslut (test)-->
-		<!--Frame dinnerOverview-->	
-		<div class="row" style="border-style: solid; display: none;">	
-			
+		</div>
 
+<!-- ***********  END DISH ********** -->
+
+	</div> 
+<!--********Rad avslut*********** -->
+
+<!-- ***********  MENU ********** -->
+		<div id="menuView" class="row" style="display: none; border-style: solid;">	
+			
 			<!--Frame-->
 			<div class="col-md-12" style="border-left-style: solid;">
 			
@@ -279,7 +284,7 @@
 					<h3 style="margin-left:5px;">My dinner: 4 people</h3>
 					</div>
 					<div class="col-md-6" style="padding-top: 1%" align="right"> 
-					<button class="btn btn-warning" type="button">Go back and edit dinner</button>
+					<button  type="button" id="editDinner" class="btn btn-warning" >Go back and edit dinner</button>
 					</div>
 				</div> <!--end right top menu-->
 				
@@ -325,30 +330,34 @@
 					<!--Secound row for dishes-->
 					<div class="row" align="center" style="margin: 10px; border-top-style: dotted">
 						<div class="col-xs-12" align="center" style="margin-top: 10px">
-							<button class="btn btn-warning" type="button">PRINT FULL RECIPE</button>
+							<button type="button" id="printRecipe" class="btn btn-warning" >PRINT FULL RECIPE</button>
 						</div>
 					</div><!--End Secound row for dishes-->
 
 				</div><!--End Right side bottom-->
 			</div><!--End Right frame-->
-
-		</div><!--End frame dinnerOverview-->
+		</div>
+<!-- ***********  END MENU ********** -->
 		
-		
-		<!--Frame-->	
-		<div class="row" style="border-style: solid; display: none;">	
-			
+<!-- ***********  MENU PREPARATION ********** -->
+		<div id="preparationView" class="row" style="display: none; border-style: solid;">	
 
 			<!--Frame-->
 			<div class="col-md-12" style="border-left-style: solid;">
 			
 				<!-- Top menu-->	
 				<div class="row" style="background-color: #ffd182; border-top-style: solid; border-bottom-style: solid; padding: 10px">
-					<div class="col-md-6"> 
-					<h3 style="margin-left:5px;">My dinner: 4 people</h3>
+					<div class="col-md-2"> 
+						<h3 style="margin-left:5px;">My dinner:</h3>
 					</div>
-					<div class="col-md-6" style="padding-top: 1%" align="right"> 
-					<button class="btn btn-warning" type="button">Go back and edit dinner</button>
+					<div class="col-md-1"> 
+						<h3 id="numberOfGuests" align="right">0</h3>
+					</div>
+					<div class="col-md-1"> 
+						<h3 align="left">people</h3>
+					</div>
+					<div class="col-md-8" style="padding-top: 1%" align="right"> 
+					<button id="edit" class="btn btn-warning" type="button">Go back and edit dinner</button>
 					</div>
 				</div> <!--end right top menu-->
 				
@@ -439,14 +448,13 @@
 							sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 						</div><!--end third-->	
 						
-
 				</div><!--End Secound row for dishes-->
 
 				</div><!--End Right side bottom-->
 			</div><!--End Right frame-->
 
-		</div><!--End frame-->
-
+		</div>
+<!-- ***********  END MENU PREPARATION ********** -->
 		
 	</div> <!--End container-->
 
