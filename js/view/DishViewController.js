@@ -1,6 +1,6 @@
 //ExampleViewController Object constructor
 var DishViewController = function(view, model) {
-	view.confirmDishButton.click(function){
+	view.confirmDish.click(function(){
 		console.log(parseInt(view.currentDish));
 		model.addDishToMenu(parseInt(view.currentDish));
  	});

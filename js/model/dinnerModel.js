@@ -76,7 +76,7 @@ var DinnerModel = function() {
 	//lasagne - confirm dish
 	this.addDishToMenu = function(id) {
 
-		var dish = getDish(id);
+		var dish = this.getDish(id);
 		var dishType = dish["type"];
 		var previousDish = getSelectedDish(dishType);
 		var index = menu.indexOf(previousDish);
@@ -156,19 +156,69 @@ var DinnerModel = function() {
 						+			'</div>'
 						+		'</div>'							
 						+	'</div>';	
-			count++;				
+			count++;
 		}
 		return html;
 	}
 
-//check if the description text is to long, in that case reduce it, 
-// otherwise return the unchanged decription. 
-this.compressDescription = function (text) {
-	if (text.length >= 30) {
-		text = text.substring(0, 31) + '...';
+	//check if the description text is to long, in that case reduce it, 
+	// otherwise return the unchanged decription. 
+	this.compressDescription = function (text) {
+		if (text.length >= 30) {
+			text = text.substring(0, 31) + '...';
+		}
+		return text;
 	}
-	return text;
-}
+	
+	this.itemSelect = function(id){
+		alert(id);
+	}
+	
+	//hämtar ID för en rätt
+	this.getID = function(id){
+		this.notifyObserver("ID" + id);
+	}
+	//hämtar namnet på en rätt
+	this.getTitle = function(id) {
+		var dish;
+		for(key in dishes){
+			if(dishes[key].id == id) {
+				dish = dishes[key];
+			}
+		}
+		this.notifyObservers("T" + dish["name"]);
+	}
+	//hämtar bilden till en rätt
+	this.getImage = function(id) {
+		var dishImage;
+		for(key in dishes){
+			if(dishes[key].id == id){
+				dishImage = dishes[key];
+			}
+		}
+		this.notifyObserver("IM" + 'image/' + dishImage["image"]);
+	}
+	
+	//hämtar info till en rätt
+	this.getDetails = function(id) {
+		var dish;
+		for(key in dishes){
+			if(dishes[key].id == id) {
+				dish = dishes[key];
+			}
+		}
+		this.notifyObservers("D" + dish["description"]);
+	}
+	
+	//hämtar priset för en rätt
+	this.getPrice = function(id) {
+		var i, price = 0, dish = this.getDish(id);
+		var ingredients = dish["ingredients"];
+		for(i = 0; i < ingredients.length; i++) {
+			price = price + ingredients[i]["price"];
+		}
+		this.notifyObservers("P" + price);
+	}
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
