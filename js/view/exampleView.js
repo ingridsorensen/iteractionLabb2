@@ -10,6 +10,7 @@ var ExampleView = function (container, model) {
 	this.menuItem = container.find(".menuItem");
 		
 	this.update = function(){
+		
 	}
 	
 	model.addObserver(this);

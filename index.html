@@ -273,70 +273,75 @@
 <!--********Rad avslut*********** -->
 
 <!-- ***********  MENU ********** -->
-		<div id="menuView" class="row" style="display: none; border-style: solid;">	
+	<div id="menuView" style="display: none; border-style: solid;">	
 			
-			<!--Frame-->
-			<div class="col-md-12" style="border-left-style: solid;">
-			
-				<!-- Top menu-->	
-				<div class="row" style="background-color: #ffd182; border-top-style: solid; border-bottom-style: solid; padding: 10px">
-					<div class="col-md-6"> 
-					<h3 style="margin-left:5px;">My dinner: 4 people</h3>
-					</div>
-					<div class="col-md-6" style="padding-top: 1%" align="right"> 
-					<button  type="button" id="editDinner" class="btn btn-warning" >Go back and edit dinner</button>
-					</div>
-				</div> <!--end right top menu-->
+		<!-- Top menu-->	
+		<div class="row" style="background-color: #ffd182; border-top-style: solid; border-bottom-style: solid; padding: 10px">
+			<div class="col-md-3"> 
+				<h3 style="margin-left:5px;">My dinner:</h3>
+			</div>
+				
+			<div class="col-md-1"> 
+				<h3 id="numberOfGuests" align="right">0</h3>
+			</div>
+					
+			<div class="col-md-2"> 
+				<h3 align="left">people</h3>
+			</div>
+					
+			<div class="col-md-1" style="padding-top: 1%" align="right"> 
+				<button  type="button" id="editDinner" class="btn btn-warning" >Go back and edit dinner</button>
+			</div>
+		</div> <!--end top menu-->
 				
 
-				<!--Center-->			
-				<div class="row" style="padding-top: 10px; padding-left: 30px; display: block; overflow-y: auto; overflow-x: hidden; height: 450px; width: 100%">
-					<!--First row for dishes-->
-					<div class="row">
-						<div class="col-xs-3" align="center"> <!--first-->
-							<div class="thumbnail">
-								<img src="images/meatballs.jpg" alt="images/image-not-found.gif">
-								<div class="caption">
-									<button class="btn btn-default" type="button">Meatballs</button>
-									<span align="right"><h4>77.20 SEK</h4></span>
-								</div>
-							</div>
-						</div><!--end first-->	
-						<div class="col-xs-3" align="center"> <!--secound-->
-							<div class="thumbnail">
-								<img src="images/toast.jpg" alt="images/image-not-found.gif">
-								<div class="caption">
-									<button class="btn btn-default" type="button">Toast</button>
-									<span align="right"><h4>180.60 SEK</h4></span>
-									
-								</div>
-							</div>
-						</div><!--end secound-->
-						<div class="col-xs-3" align="center"> <!--third-->
-							<div class="thumbnail">
-								<img src="images/icecream.jpg" alt="images/image-not-found.gif">
-								<div class="caption">
-									<button class="btn btn-default"  type="button">Ice Cream</button>
-									<span align="right"><h4>83.40 SEK</h4></span>
-								</div>
-							</div>
-						</div><!--end third-->	
-						<div class="col-xs-3" id="totalDinnerPrice" align="bottom" style="padding-top: 16%; border-left-style: dotted"> <!--forth-->
-							<h3>Total: 341.20SEK</h3>
-						</div><!--end forth-->	
-					
-					
-					</div><!--Ed First row for dishes-->
-					<!--Secound row for dishes-->
-					<div class="row" align="center" style="margin: 10px; border-top-style: dotted">
-						<div class="col-xs-12" align="center" style="margin-top: 10px">
-							<button type="button" id="printRecipe" class="btn btn-warning" >PRINT FULL RECIPE</button>
+		<!--Center-->			
+		<div class="row" style="padding-top: 10px; padding-left: 30px; display: block;">
+			<!--First row for dishes-->
+				<div class="col-md-2" align="center"> <!--first-->
+					<div class="thumbnail">
+						<img src="images/meatballs.jpg" alt="images/image-not-found.gif">
+						<div class="caption">
+							<button class="btn btn-default" type="button">Meatballs</button>
+							<span align="right"><h4>77.20 SEK</h4></span>
 						</div>
-					</div><!--End Secound row for dishes-->
+					</div>
+				</div><!--end first-->	
+					
+				<div class="col-md-5" align="center"> <!--secound-->
+					<div class="thumbnail">
+						<img src="images/toast.jpg" alt="images/image-not-found.gif">
+						<div class="caption">
+							<button class="btn btn-default" type="button">Toast</button>
+							<span align="right"><h4>180.60 SEK</h4></span>				
+						</div>
+					</div>
+				</div><!--end secound-->
+					
+				<div class="col-md-2" align="center"> <!--third-->
+					<div class="thumbnail">
+						<img src="images/icecream.jpg" alt="images/image-not-found.gif">
+						<div class="caption">
+							<button class="btn btn-default"  type="button">Ice Cream</button>
+							<span align="right"><h4>83.40 SEK</h4></span>
+						</div>
+					</div>
+				</div><!--end forth-->	
+					
+				<div class="col-md-2" id="totalDinnerPrice" align="bottom" style="padding-top: 16%; border-left-style: dotted"> <!--forth-->
+					<h3>Total: 341.20SEK</h3>
+				</div><!--end forth-->	
+			<!--End First row for dishes-->
+					
+			<!--Secound row for dishes-->
 
-				</div><!--End Right side bottom-->
-			</div><!--End Right frame-->
-		</div>
+		</div><!--End Right side bottom-->
+		<div class="row" align="center" style="margin: 10px; border-top-style: dotted">
+				<div class="col-sm-10" align="center" style="margin-top: 10px">
+					<button type="button" id="printRecipe" class="btn btn-warning" >PRINT FULL RECIPE</button>
+				</div>
+		</div><!--End Secound row for dishes-->
+	</div>
 <!-- ***********  END MENU ********** -->
 		
 <!-- ***********  MENU PREPARATION ********** -->
@@ -363,23 +368,23 @@
 				
 
 				<!--Center-->			
-				<div class="row" style="padding-top: 10px; padding-left: 30px; display: block; overflow-y: auto; overflow-x: hidden; height: 540px; width: 100%">
+				<div class="row" style="padding-top: 10px; padding-left: 30px; display: block;">
 					<!--First row for dishes-->
 					<div class="row">
-						<div class="col-xs-2"> <!--first-->
+						<div class="col-md-2"> <!--first-->
 							<div class="thumbnail">
 								<img src="images/meatballs.jpg" alt="images/image-not-found.gif">
 								
 							</div>
 						</div><!--end first-->	
-						<div class="col-xs-4" > <!--secound-->
+						<div class="col-md-4" > <!--secound-->
 							<h3>Meatbals</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
 							aliquip ex ea commodo consequat.</p>
 						</div><!--end secound-->
-						<div class="col-xs-6" > <!--third-->
+						<div class="col-md-6" > <!--third-->
 							<h3>Preparation</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -396,19 +401,19 @@
 					</div><!--Ed First row for dishes-->
 					<!--Third row for dishes-->
 				<div class="row">
-						<div class="col-xs-2" align="center"> <!--first-->
+						<div class="col-md-2" align="center"> <!--first-->
 							<div class="thumbnail">
 								<img src="images/toast.jpg" alt="images/image-not-found.gif">
 							</div>
 						</div><!--end first-->
-						<div class="col-xs-4" > <!--secound-->
+						<div class="col-md-4" > <!--secound-->
 							<h3>Toast</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
 							aliquip ex ea commodo consequat.</p>
 						</div><!--end secound-->
-						<div class="col-xs-6" > <!--third-->
+						<div class="col-md-6" > <!--third-->
 							<h3>Preparation</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -424,19 +429,19 @@
 				</div><!--End Third row for dishes-->
 				
 				<div class="row">
-						<div class="col-xs-2" align="center"> <!--first-->
+						<div class="col-md-2" align="center"> <!--first-->
 							<div class="thumbnail">
 								<img src="images/icecream.jpg" alt="images/image-not-found.gif">
 							</div>
 						</div><!--end first-->
-						<div class="col-xs-4" > <!--secound-->
+						<div class="col-md-4" > <!--secound-->
 							<h3>Ice Cream</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
 							aliquip ex ea commodo consequat.</p>
 						</div><!--end secound-->
-						<div class="col-xs-6" > <!--third-->
+						<div class="col-md-6" > <!--third-->
 							<h3>Preparation</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

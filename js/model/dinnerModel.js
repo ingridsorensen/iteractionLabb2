@@ -17,13 +17,13 @@ var DinnerModel = function() {
 	this.notifyObservers = function(obj) {
 		var i;
 		for	(i = 0; i < obs.length; i++) {	
-			obs[i].update();
+			obs[i].update(obj);
 		}
 	}
 
 	this.setNumberOfGuests = function(num) {
 		numberOfGuests = num;
-		this.notifyObservers("");
+		this.notifyObservers("UPD");
 		return numberOfGuests;
 	}
 

@@ -9,14 +9,14 @@ var ExampleViewController = function(view, model) {
 		model.getTitle(id);
 		model.getImage(id);
 		
-		("#exampleView").css("display", "none");
+		$("#exampleView").css("display", "none");
  		$("#header").css("display", "block");
 		$("#sidemenuView").css("display", "block");
  		$("#dishView").css("display", "block");
  	});
- 	//view.confirmDinnerButton.click(function(){
- 	//	window.location.href = "dinnerOverview.html";
- 	//});
+	
+ 	
+	
  	//view.goToMainButton.click(function(){
  	//	window.location.href = "selectDish.html";
  	//});

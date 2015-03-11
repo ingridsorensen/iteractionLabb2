@@ -4,7 +4,7 @@ var DishView = function (container, model) {
 	this.confirmDish = container.find("#confirmDish");
 	this.goBack = container.find("#goBack");
 	
-	this.surrentDish = 0
+	this.currentDish = 0
 	this.dishTitle = container.find("#dishTitle");
 	this.dishImage = container.find("#dishImage");
 
